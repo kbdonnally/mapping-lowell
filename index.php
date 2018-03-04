@@ -1,6 +1,6 @@
 <?php echo head(array('bodyid'=>'home', 'bodyclass' =>'test')); ?>
 
-<div id="primary">
+<div id="main-content">
     <?php if ($homepageText = get_theme_option('Homepage Text')): ?>
     <div id="homepage-text"><p><?php echo $homepageText; ?></p></div>
     <?php endif; ?>
