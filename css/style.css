@@ -10,11 +10,74 @@
  */
 /* General Styles: */
 /* Landing Page: */
+.home-landing-grid {
+  position: relative;
+  display: grid;
+  grid-template-areas: "title" "subtitle";
+  height: 100vh;
+  width: 100%;
+  padding-left: 4.167%; }
+  @media screen and (min-width: 600px) {
+    .home-landing-grid {
+      padding-left: 8.33%; } }
+
+.home-landing__page-title {
+  grid-area: title;
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-content: start; }
+
+.home-landing__subtitle {
+  grid-area: subtitle; }
+
 /* Main Content: */
+.home-main-content {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "about" "exhibit" "bg" "context" "teaching";
+  padding: 0 4.167%; }
+  @media screen and (min-width: 600px) {
+    .home-main-content {
+      padding: 0 8.33%; } }
+  @media screen and (min-width: 768px) {
+    .home-main-content {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "about exhibit" "bg bg" "context teaching"; } }
+
 /* About: */
+.home__about {
+  grid-area: about; }
+  @media screen and (min-width: 768px) {
+    .home__about {
+      padding-right: 8.33%; } }
+
+/* Exhibits: */
+.home__exhibits {
+  grid-area: exhibit; }
+  @media screen and (min-width: 768px) {
+    .home__exhibits {
+      padding-left: 8.33%; } }
+
 /* Historical Background: */
+.home__background {
+  grid-area: bg; }
+
 /* Modern Context: */
+.home__context {
+  grid-area: context; }
+  @media screen and (min-width: 768px) {
+    .home__context {
+      padding-right: 8.33%; } }
+
 /* Teaching: */
+.home__teaching {
+  grid-area: teaching; }
+  @media screen and (min-width: 768px) {
+    .home__teaching {
+      padding-left: 8.33%; } }
+
 /** 
  * Section: Old Defaults
  *
