@@ -18,7 +18,8 @@
   width: 100%;
   padding-left: 4.167%;
   padding-right: 4.167%;
-  background-image: linear-gradient(rgba(132, 224, 255, 0.5), rgba(132, 224, 255, 0.5)), url("../img/theme-files/classy-fabric.png"); }
+  background-image: linear-gradient(rgba(133, 224, 255, 0.7), rgba(133, 224, 255, 0.7)), url("../img/theme-files/map-of-lowell-1841.jpg");
+  background-size: auto, 120vw; }
   @media screen and (min-width: 600px) {
     .home-landing-grid {
       padding-left: 8.33%; } }
@@ -34,7 +35,11 @@
   margin-bottom: .5em;
   font-family: "Playfair Display", serif;
   font-size: 3rem;
-  font-weight: 700; }
+  font-weight: 700;
+  color: black; }
+  .home-title__text span {
+    background-color: #ccfeff;
+    line-height: 1.2 !important; }
   @media screen and (min-width: 600px) {
     .home-title__text {
       font-size: 4rem; } }
@@ -44,15 +49,20 @@
 
 .home-landing__subtitle {
   grid-area: subtitle;
+  padding-top: 1em;
   font-size: 1rem;
-  font-weight: 300;
-  line-height: 1.3 !important; }
+  font-style: italic;
+  font-family: "Taviraj", serif;
+  line-height: 1.2 !important;
+  color: black; }
+  .home-landing__subtitle span {
+    background-color: #ccfeff; }
   @media screen and (min-width: 600px) {
     .home-landing__subtitle {
       font-size: 1.25rem; } }
   @media screen and (min-width: 768px) {
     .home-landing__subtitle {
-      font-size: 1.5rem; } }
+      font-size: 2rem; } }
 
 /* Main Content: */
 .home-main-content {
