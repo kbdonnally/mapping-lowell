@@ -1618,5 +1618,6 @@ body {
   line-height: 1; }
 
 [class*="__title"] {
-  margin-bottom: 1em;
-  font-weight: 700; }
+  margin-bottom: .5em;
+  font-family: "Playfair Display", serif;
+  font-size: 2rem; }

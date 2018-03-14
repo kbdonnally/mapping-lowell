@@ -24,6 +24,8 @@ body {
 
 // Section titles
 [class*="__title"] {
-	margin-bottom: 1em;
-	font-weight: 700;
+	margin-bottom: .5em;
+  font-family: "Playfair Display", serif;
+//	font-weight: 700;
+  font-size: 2rem;
 }
