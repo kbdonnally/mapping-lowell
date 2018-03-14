@@ -1,7 +1,7 @@
 @import "home";
 @import "old-theme-useful"; // elems I'm not working on, so leaving to old theme
 
-/* 1. General Styles: */
+/* General Styles: */
 
 * {
   -moz-box-sizing: border-box;
@@ -15,4 +15,15 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: 1em;
   line-height: 1.5;
+}
+
+// Title spacing
+[class*="title"] {
+	line-height: 1;
+}
+
+// Section titles
+[class*="__title"] {
+	margin-bottom: 1em;
+	font-weight: 700;
 }
