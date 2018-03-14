@@ -13,12 +13,17 @@
 
 /* Landing Page: */
 
+.home-landing-wrapper {
+	position: relative;
+	display: grid;
+	grid-auto-rows: minmax(100vh, auto);
+}
+
 .home-landing-grid {
 	position: relative;
 	display: grid;
 	grid-template-areas: "title"
 						 "subtitle";
-	height: 100vh;
 	width: 100%;
 	padding-left: 4.167%;
 	padding-right: 4.167%;
@@ -38,7 +43,8 @@
 }
 
 .home-title__text {
-	margin-bottom: .5em;
+	margin-top: .5em;
+//	margin-bottom: .5em;
 	font-family: "Playfair Display", serif;
 	font-size: 3rem;
 	font-weight: 700;
@@ -64,21 +70,25 @@
 
 .home-landing__subtitle {
 	grid-area: subtitle;
-	padding-top: 1em;
+	padding-bottom: 1em;
 	font-size: 1rem;
 	font-style: italic;
 //	font-family: "Oswald", sans-serif;
 	font-family: "Taviraj", serif;
-	line-height: 1.2 !important;
+	line-height: 1.5 !important;
+	margin-top: 1.5em;
 	color: black; //hsla(260,7%,16%,1);
 	span {
 		background-color: hsla(181,100%,90%,1); //rgba(255,255,255,.7);
 //		line-height: 1.2;
 	}
 	@media screen and (min-width: 600px) {
-		font-size: 1.25rem;
+		font-size: 1.5rem;
 	}
 	@media screen and (min-width: 768px) {
+		font-size: 1.75rem;
+	}
+	@media screen and (min-width: 1024px) {
 		font-size: 2rem;
 	}
 }
@@ -95,8 +105,10 @@
 	"context"
 	"teaching";
 	padding: 0 4.167%;
+	padding-top: 1em;
 	@media screen and (min-width: 600px) {
 		padding: 0 8.33%;
+		padding-top: 1em;
 	}
 	@media screen and (min-width: 768px) {
 		grid-template-columns: 1fr 1fr;
