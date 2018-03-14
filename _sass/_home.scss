@@ -1,0 +1,148 @@
+/**
+ * 					Home - Table of Contents
+ * --------------------------------------------------------------------
+ * #  Section:			Description:
+ * --------------------------------------------------------------------
+ * 1. General styles....Universal styles, repeating elements
+ * 2. Landing page......Styles for title page
+ * 3. Main content......Styles for content sections, e.g. 'About'
+ * --------------------------------------------------------------------
+ */
+
+/* General Styles: */
+
+/* Landing Page: */
+
+.home-landing-grid {
+	position: relative;
+	display: grid;
+	grid-template-areas: "title"
+						 "subtitle";
+	height: 100vh;
+	width: 100%;
+	padding-left: 4.167%;
+	@media screen and (min-width: 600px) {
+		padding-left: 8.33%;
+	}
+}
+
+.home-landing__page-title {
+	grid-area: title;
+	position: relative;
+	display: grid;
+	align-items: center;
+	justify-content: start;
+}
+
+.home-title__text {
+
+}
+
+.home-landing__subtitle {
+	grid-area: subtitle;
+}
+
+/* Main Content: */
+
+.home-main-content {
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas: "about"
+	"exhibit"
+	"bg"
+	"context"
+	"teaching";
+	padding: 0 4.167%;
+	@media screen and (min-width: 600px) {
+		padding: 0 8.33%;
+	}
+	@media screen and (min-width: 768px) {
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: "about exhibit"
+		"bg bg"
+		"context teaching";
+	}
+}
+
+/* About: */
+
+.home__about {
+	grid-area: about;
+	@media screen and (min-width: 768px) {
+		padding-right: 8.33%;
+	}
+}
+
+.home-about__title {
+
+}
+
+.home-about__text {
+
+}
+
+/* Exhibits: */
+
+.home__exhibits {
+	grid-area: exhibit;
+	@media screen and (min-width: 768px) {
+		padding-left: 8.33%;
+	}
+}
+
+.home-exhibit__title {
+
+}
+
+.home-exhibit__text {
+
+}
+
+/* Historical Background: */
+
+.home__background {
+	grid-area: bg;
+}
+
+.home-bg__title {
+
+}
+
+.home-bg__text {
+
+}
+
+/* Modern Context: */
+
+.home__context {
+	grid-area: context;
+	@media screen and (min-width: 768px) {
+		padding-right: 8.33%;
+	}
+}
+
+.home-context__title {
+
+}
+
+.home-context__text {
+
+}
+
+/* Teaching: */
+
+.home__teaching {
+	grid-area: teaching;
+	@media screen and (min-width: 768px) {
+		padding-left: 8.33%;
+	}
+}
+
+.home-teaching__title {
+
+}
+
+.home-teaching__text {
+
+}
