@@ -1,4 +1,28 @@
+/**
+ * 					Table of Contents
+ * --------------------------------------------------------------------
+ * #  Section:			Description:
+ * --------------------------------------------------------------------
+ * 1. General styles....Universal styles, repeating elements
+ * 2. Landing page......Styles for title page
+ * 3. Main content......Styles for content sections, e.g. 'Ethos'
+ * 4. Unused styles.....Copied main styles for future customizing
+ * --------------------------------------------------------------------
+ */
+/* 1. General Styles: */
 @import url(http://fonts.googleapis.com/css?family=Oswald:700);
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 1em;
+  line-height: 1.5; }
+
 /* ==========================================================================
    normalize.css v2.1.2 | MIT License | git.io/normalize
    ========================================================================== */
@@ -141,26 +165,29 @@ table {
    Styling kept from Berlin v2.2
    ========================================================================== */
 /* @group ----- Generic ----- */
-* {
+/* * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 body {
   font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 18px;
   color: #333;
-  background: #fff; }
+  background: #fff;
+}
 
 form, fieldset {
   border: 0;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 input[type=text], input[type=password], textarea {
   border: 1px solid #ccc;
-  display: block; }
-
+  display: block;
+} */
 /* -- Headings -- */
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 18px; }
