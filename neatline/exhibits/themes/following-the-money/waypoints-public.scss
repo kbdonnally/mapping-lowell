@@ -1,0 +1,39 @@
+#waypoints {
+  background: #fff;
+  font-size: 1.4em;
+  border-radius: 2px;
+  overflow-y: auto;
+  color: #000;
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  a.title {
+    padding: .5em 1em;
+    display: list-item;
+    list-style: none;
+    cursor: pointer;
+    line-height: 1.4em;
+    font-weight: 300;
+    &:hover {
+      text-decoration: none;
+    }
+    &.highlighted {
+      background: #e0f5ff;
+    }
+    &.selected {
+      background: #08c;
+      color: #fff;
+    }
+  }
+}
+
+#neatline #waypoints {
+  max-width: 300px;
+  max-height: 80%;
+  right: 40px;
+  top: 40px;
+  &.empty {
+    display: none;
+  }
+}
