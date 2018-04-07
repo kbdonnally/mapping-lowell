@@ -10,3 +10,7 @@
 	- *NB: just labeling it 'Default View' for right now, but name can be changed to whatever is most appropriate.*
 
 - Article on how to create a custom Neatline theme [here](http://neatline.org/2014/04/01/creating-themes-for-individual-neatline-exhibits/)
+
+## April 7, 2018
+
+- Neatline editor: add above edits to actual site, not just local Neatline copy
