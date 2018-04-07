@@ -15,6 +15,7 @@
     <!-- Stylesheets -->
     <?php
     queue_css_file(array('style'));
+    queue_css_url('https://fonts.googleapis.com/icon?family=Raleway:200,300,400,400i,700,900|Montserrat:200,400,700|Taviraj:300,300i,400,400i,600,700,900|Playfair+Display:400,400i,700,900');
     echo head_css();
     ?>
     <!-- JavaScripts -->
