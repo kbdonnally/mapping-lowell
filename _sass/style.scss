@@ -24,8 +24,11 @@ body {
 
 // Section titles
 [class*="__title"] {
+//  display: inline-block;
+//  height: 1.2em;
 	margin-bottom: .5em;
   font-family: "Playfair Display", serif;
 //	font-weight: 700;
   font-size: 2rem;
+//  background-color: hsla(181,100%,90%,1);
 }
