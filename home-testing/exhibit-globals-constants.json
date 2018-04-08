@@ -4,6 +4,7 @@
  *
  * Explanation: 	appears to be effectively what you'd get from an API call
  *					for "give me all the data you have on this exhibit".
+ *					Oh! "Constants" must mean "values for global variables".
  *
  * Code: 			<?php echo Zend_Json::encode(
  * 						nl_getGlobals(nl_getExhibit())
