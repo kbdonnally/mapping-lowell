@@ -32,3 +32,9 @@ Especially because people are less likely to do documentation in a systematized 
 ### Our GitHub:
 
 - This will prob be useful when we're taking on the new Neatline: [our repo](https://github.com/scholarslab/neatline-theme-template) containing Neatline custom theme starter files.
+
+## April 8, 2018
+
+- Cool so we legit don't explain anywhere that we use Underscore.js templating for Neatline. ("We" being the default voice I'm taking with this; the SLab could've had nothing to do with that lack of documentation.)
+	- The place where the templates are printed is preceded with a comment that says "Underscore templates.", and the templates are in a directory called `underscore`, but it's not at all clear *why* it's called that contextually.
+	- (Like, I have a note on my hand-copy of the `exhibit.php` partial that says "what's underscore mean? is dir but name confusing". I discovered it after looking up what `rv-html` meant, although it's kind of happenstance that I put that together; I probably wouldn't have if I didn't go on the Rivets.js website.)
