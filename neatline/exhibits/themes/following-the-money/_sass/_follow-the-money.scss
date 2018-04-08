@@ -1,0 +1,18 @@
+/*!
+ * Custom Neatline theme for Following the Money
+ * NB: in no real order since still deciphering elements.
+ */
+
+.neatline {
+	#content {
+		padding: 0 4.167%;
+		@media screen and (min-width: 600px) {
+			padding: 0 8.33%;
+		}
+	}
+}
+
+#neatline-narrative {
+	padding-right: 0;
+	margin: 0;
+}
