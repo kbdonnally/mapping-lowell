@@ -1,9 +1,13 @@
 /**
- * Label in show.php output: 'Globals constants.'
- * Found in: 'partials/exhibit.php'
- * Input: <?php echo Zend_Json::encode(
- * 			nl_getGlobals(nl_getExhibit())
- *		  ); ?>
+ * Label in output: 'Globals constants.'
+ * Found in: 		'partials/exhibit.php'
+ *
+ * Explanation: 	appears to be effectively what you'd get from an API call
+ *					for "give me all the data you have on this exhibit".
+ *
+ * Code: 			<?php echo Zend_Json::encode(
+ * 						nl_getGlobals(nl_getExhibit())
+ *		  			); ?>
 */
 
 Neatline.g = {
