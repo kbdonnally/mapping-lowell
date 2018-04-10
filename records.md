@@ -56,16 +56,20 @@ Especially because people are less likely to do documentation in a systematized 
 
 3. Header menu: what links would you like there, and in what order? The rule of thumb generally is left-to-right most-to-least important.
 
-<input type="text" id="name" name="name" style="width: 400px;"/> <button id="myBtn">Submit</button>
-
 4. Would you like to keep the same logo that you're currently using, or just use the name of the site instead of a logo? I ask because the colors no longer match, but I can change the color of the orange part of the logo pretty easily.
 	- Also: happy to work with you in the future on a logo design, if we decide to keep working together.
 
 5. Any major changes to the website on your end, or questions/comments you have for me? Don't hesitate to email with additional thoughts.
 
+### Notes: 
+<textarea type="text" id="text" name="name" style="width: 600px; height: 200px;">Notes here</textarea> <button id="myBtn">Submit</button>
+
 <script type="javascript/text">
 	var btn = document.getElementById("myBtn");
+	var notes = document.getElementById("text");
+	console.log(notes.innerHTML);
 	btn.addEventListener("click", function() {
-
-	})
+		console.log("test");
+		
+	});
 </script>
