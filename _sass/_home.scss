@@ -13,14 +13,22 @@
 
 /* Landing Page: */
 
+.home-landing-wrapper {
+	position: relative;
+	display: grid;
+	grid-auto-rows: minmax(100vh, auto);
+}
+
 .home-landing-grid {
 	position: relative;
 	display: grid;
 	grid-template-areas: "title"
 						 "subtitle";
-	height: 100vh;
 	width: 100%;
 	padding-left: 4.167%;
+	padding-right: 4.167%;
+	background-image: linear-gradient(hsla(195,100%,76%,.7), hsla(195,100%,76%,.7)), url("../img/theme-files/map-of-lowell-1841.jpg"); // url("../img/theme-files/classy-fabric.png");
+	background-size: auto, 120vw;
 	@media screen and (min-width: 600px) {
 		padding-left: 8.33%;
 	}
@@ -30,16 +38,59 @@
 	grid-area: title;
 	position: relative;
 	display: grid;
-	align-items: center;
+	align-items: end;
 	justify-content: start;
 }
 
 .home-title__text {
-
+	margin-top: .5em;
+//	margin-bottom: .5em;
+	font-family: "Playfair Display", serif;
+	font-size: 3rem;
+	font-weight: 700;
+	color: black; // hsla(181,97%,86%,1);
+//	color: hsla(260,7%,16%,1);
+	span {
+		background-color: hsla(181,100%,90%,1);
+		line-height: 1.2 !important;
+	}
+	@media screen and (min-width: 600px) {
+		font-size: 4rem;
+	}
+	@media screen and (min-width: 768px) {
+		font-size: 5rem;
+	}
+	@media screen and (min-width: 1024px) {
+	//	font-size: 6rem;
+	}
+	@media screen and (min-width: 1200px) {
+	//	font-size: 5.5rem;
+	}
 }
 
 .home-landing__subtitle {
 	grid-area: subtitle;
+	padding-bottom: 1em;
+	font-size: 1rem;
+	font-style: italic;
+//	font-family: "Oswald", sans-serif;
+	font-family: "Taviraj", serif;
+	line-height: 1.5 !important;
+	margin-top: 1.5em;
+	color: black; //hsla(260,7%,16%,1);
+	span {
+		background-color: hsla(181,100%,90%,1); //rgba(255,255,255,.7);
+//		line-height: 1.2;
+	}
+	@media screen and (min-width: 600px) {
+		font-size: 1.5rem;
+	}
+	@media screen and (min-width: 768px) {
+		font-size: 1.75rem;
+	}
+	@media screen and (min-width: 1024px) {
+		font-size: 2rem;
+	}
 }
 
 /* Main Content: */
@@ -54,8 +105,10 @@
 	"context"
 	"teaching";
 	padding: 0 4.167%;
+	padding-top: 1em;
 	@media screen and (min-width: 600px) {
 		padding: 0 8.33%;
+		padding-top: 1em;
 	}
 	@media screen and (min-width: 768px) {
 		grid-template-columns: 1fr 1fr;

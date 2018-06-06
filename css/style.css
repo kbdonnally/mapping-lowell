@@ -10,13 +10,20 @@
  */
 /* General Styles: */
 /* Landing Page: */
+.home-landing-wrapper {
+  position: relative;
+  display: grid;
+  grid-auto-rows: minmax(100vh, auto); }
+
 .home-landing-grid {
   position: relative;
   display: grid;
   grid-template-areas: "title" "subtitle";
-  height: 100vh;
   width: 100%;
-  padding-left: 4.167%; }
+  padding-left: 4.167%;
+  padding-right: 4.167%;
+  background-image: linear-gradient(rgba(133, 224, 255, 0.7), rgba(133, 224, 255, 0.7)), url("../img/theme-files/map-of-lowell-1841.jpg");
+  background-size: auto, 120vw; }
   @media screen and (min-width: 600px) {
     .home-landing-grid {
       padding-left: 8.33%; } }
@@ -25,11 +32,45 @@
   grid-area: title;
   position: relative;
   display: grid;
-  align-items: center;
+  align-items: end;
   justify-content: start; }
 
+.home-title__text {
+  margin-top: .5em;
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: black; }
+  .home-title__text span {
+    background-color: #ccfeff;
+    line-height: 1.2 !important; }
+  @media screen and (min-width: 600px) {
+    .home-title__text {
+      font-size: 4rem; } }
+  @media screen and (min-width: 768px) {
+    .home-title__text {
+      font-size: 5rem; } }
+
 .home-landing__subtitle {
-  grid-area: subtitle; }
+  grid-area: subtitle;
+  padding-bottom: 1em;
+  font-size: 1rem;
+  font-style: italic;
+  font-family: "Taviraj", serif;
+  line-height: 1.5 !important;
+  margin-top: 1.5em;
+  color: black; }
+  .home-landing__subtitle span {
+    background-color: #ccfeff; }
+  @media screen and (min-width: 600px) {
+    .home-landing__subtitle {
+      font-size: 1.5rem; } }
+  @media screen and (min-width: 768px) {
+    .home-landing__subtitle {
+      font-size: 1.75rem; } }
+  @media screen and (min-width: 1024px) {
+    .home-landing__subtitle {
+      font-size: 2rem; } }
 
 /* Main Content: */
 .home-main-content {
@@ -37,10 +78,12 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "about" "exhibit" "bg" "context" "teaching";
-  padding: 0 4.167%; }
+  padding: 0 4.167%;
+  padding-top: 1em; }
   @media screen and (min-width: 600px) {
     .home-main-content {
-      padding: 0 8.33%; } }
+      padding: 0 8.33%;
+      padding-top: 1em; } }
   @media screen and (min-width: 768px) {
     .home-main-content {
       grid-template-columns: 1fr 1fr;
@@ -1558,7 +1601,7 @@ a#advanced-search {
 
   .view-items-link a, #search-container input[type=text] {
     background-image: none; } }
-/* 1. General Styles: */
+/* General Styles: */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -1570,3 +1613,11 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: 1em;
   line-height: 1.5; }
+
+[class*="title"] {
+  line-height: 1; }
+
+[class*="__title"] {
+  margin-bottom: .5em;
+  font-family: "Playfair Display", serif;
+  font-size: 2rem; }
