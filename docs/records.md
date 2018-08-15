@@ -18,12 +18,12 @@
 - From the site: 
 
 >### Getting started: Creating the theme directory
-
+> 
 >Neatline themes are created as directories that sit inside of the Omeka theme. For any given exhibit, Neatline will look for a theme directory that has the same name as the “URL slug” of the exhibit, the unique, plain-text identifier used to form the end of the exhibit’s public-facing URL. So, imagine you’ve got an exhibit called “Test Exhibit,” with a URL slug of `test-exhibit`. To create a theme for the exhibit, create a directory called test-exhibit at this location relative to the root of your Omeka theme:
-
+> 
 >```[omeka-theme]/neatline/exhibits/themes/test-exhibit```
 
-- ** Side Note:** this (below) seems... not great. I really don't like the attitude implied here and suspect it may have something to do with why Omeka/Neatline documentation thus far has been shoddy. Maybe I'm just naive; I just feel like people should have access to the code with a disclaimer sooner rather than later. From the Neatline theme tutorial:
+- **Side Note:** this (below) seems... not great. I really don't like the attitude implied here and suspect it may have something to do with why Omeka/Neatline documentation thus far has been shoddy. Maybe I'm just naive; I just feel like people should have access to the code with a disclaimer sooner rather than later. From the Neatline theme tutorial:
 
 > I’ve held off on documenting this publicly because I wanted to be sure that the file structure and Javacsript APIs used in the themes worked well at scale – but at this point it’s all pretty battle tested, and I’m curious to see what other folks can come up with!
 
@@ -53,3 +53,51 @@ Especially because people are less likely to do documentation in a systematized 
 	- Ideally, have each text section have a "read more..." button, since they're quite long
 	- Make the name of each item come up on hover (highlighted areas on map)
 	- *Possibly* format the popups on exhibit items
+3. Big questions:
+	- Where are the relevant CSS files, and how can I edit them?
+	- Have I solved this problem before?
+	- Where is the navbar stored?
+	- What is this JS templating nonsense I was talking abbout? Do I need to mess with it?
+
+### File locations
+
+- Where to put Neatline theme customizations:
+
+```
+> lowell/themes/maplowell/neatline/exhibits/themes/following-the-money
+```
+
+- Structure of Neatline theme:
+
+```
+following-the-money/
+	- assets/
+		- css/
+			- _partials/
+			- style.scss
+		- js/
+	- style.css
+	- script.js
+	- show.php
+	- item.php
+```
+
+- With asset preprocessing via taskrunner:
+
+```
+following-the-money/
+	- assets/
+		- css/
+			- _partials/
+			- style.scss
+		- js/
+	- node_modules/
+	- style.css
+	- script.js
+	- show.php
+	- item.php
+	- .babelrc
+	- gulpfile.js
+	- package.json
+	- package-lock.json
+```
