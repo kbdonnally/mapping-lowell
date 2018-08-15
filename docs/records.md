@@ -101,3 +101,68 @@ following-the-money/
 	- package.json
 	- package-lock.json
 ```
+
+### Useful functions:
+
+- Views.php, line 110: return number of records in exhibit
+
+```
+/**
+ * Count the records in an exhibit.
+ *
+ * @param NeatlineExhibit $exhibit The exhibit record.
+ * @return integer The number of records.
+ */
+function nl_getExhibitRecordCount($exhibit=null)
+{
+    $exhibit = $exhibit ? $exhibit : nl_getExhibit();
+    return (int) $exhibit->getNumberOfRecords();
+}
+```
+
+- Right below, same file: return markup for exhibit (map stuff) & narrative (text stuff), respectively
+
+**Map:**
+
+```
+/**
+ * Render and return the exhibit partial.
+ *
+ * @return string The exhibit markup.
+ */
+function nl_getExhibitMarkup()
+{
+    return get_view()->partial('exhibits/partials/exhibit.php');
+}
+```
+
+**Text:**
+
+```
+/**
+ * Render and return the exhibit narrative partial.
+ *
+ * @return string The narrative markup.
+ */
+function nl_getNarrativeMarkup()
+{
+    return get_view()->partial('exhibits/partials/narrative.php');
+}
+```
+
+- Neatline Globals function used in `exhibit.php` to return exhibit data:
+
+```
+/**
+ * Gather global properties exposed via the `neatline_globals` filter.
+ *
+ * @param NeatlineExhibit $exhibit The exhibit.
+ * @return array The modified array of key => values.
+ */
+function nl_getGlobals($exhibit)
+{
+    return apply_filters('neatline_globals', array(), array(
+        'exhibit' => $exhibit
+    ));
+}
+```
