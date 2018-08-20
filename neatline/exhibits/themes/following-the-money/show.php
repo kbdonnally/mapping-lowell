@@ -9,13 +9,17 @@
 
 ?>
 
+<?php
+$title = nl_getExhibitField('title');
+?>
+
 <?php echo head(array(
-  'title' => nl_getExhibitField('title'),
+  'title' => $title,
   'bodyclass' => 'neatline show'
 )); ?>
 
 <!-- Exhibit title: -->
-<h1><?php echo nl_getExhibitField('title'); ?></h1>
+<h1><?php echo $title; ?></h1>
 
 <!-- "View Fullscreen" link: -->
 <?php echo nl_getExhibitLink(
