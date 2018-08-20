@@ -170,3 +170,11 @@ function nl_getGlobals($exhibit)
     ));
 }
 ```
+
+## Using NPM:
+
+- Force install `package.json` without answering questions:
+
+```
+$ npm install -y
+```
