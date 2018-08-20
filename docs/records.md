@@ -173,8 +173,18 @@ function nl_getGlobals($exhibit)
 
 ## Using NPM:
 
+*Setting up package manager in Neatline theme specifically, not the Omeka theme.*
+
 - Force install `package.json` without answering questions:
 
 ```
 $ npm install -y
+```
+
+- Watch SCSS:
+
+*Whoops not doing with NPM right now.*
+
+```
+sass --watch --sourcemap=none assets/css/style.scss:./style.css
 ```
