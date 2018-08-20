@@ -1,0 +1,912 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>@font-face {
+  font-family: octicons-anchor;
+  src: url(https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.woff) format('woff');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body .markdown-body {
+    padding: 45px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    word-wrap: break-word;
+}
+
+pre {
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body input {
+  font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.markdown-body a {
+  color: #4078c0;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body .select::-ms-expand {
+  opacity: 0;
+}
+
+.markdown-body .octicon {
+  font: normal normal normal 16px/1 octicons-anchor;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .octicon-link:before {
+  content: '\f05c';
+}
+
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body .anchor {
+  display: inline-block;
+  padding-right: 2px;
+  margin-left: -18px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #000;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h1 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h3 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h5 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body h6 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: #fff;
+}
+
+.markdown-body code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .pl-c {
+  color: #969896;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #0086b3;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #795da3;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #333;
+}
+
+.markdown-body .pl-ent {
+  color: #63a35c;
+}
+
+.markdown-body .pl-k {
+  color: #a71d5d;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #183691;
+}
+
+.markdown-body .pl-v {
+  color: #ed6a43;
+}
+
+.markdown-body .pl-id {
+  color: #b52a1d;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b52a1d;
+  color: #f8f8f8;
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #63a35c;
+  font-weight: bold;
+}
+
+.markdown-body .pl-ml {
+  color: #693a17;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #1d3e81;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mq {
+  color: #008080;
+}
+
+.markdown-body .pl-mi {
+  color: #333;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #333;
+  font-weight: bold;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.markdown-body .pl-mdr {
+  color: #795da3;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mo {
+  color: #1d3e81;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .plan-price-unit {
+  color: #767676;
+  font-weight: normal;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 0.35em 0.25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body .plan-choice {
+  padding: 15px;
+  padding-left: 40px;
+  display: block;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  font-weight: normal;
+  background-color: #fafafa;
+}
+
+.markdown-body .plan-choice.open {
+  background-color: #fff;
+}
+
+.markdown-body .plan-choice.open .plan-choice-seat-breakdown {
+  display: block;
+}
+
+.markdown-body .plan-choice-free {
+  border-radius: 3px 3px 0 0;
+}
+
+.markdown-body .plan-choice-paid {
+  border-radius: 0 0 3px 3px;
+  border-top: 0;
+  margin-bottom: 20px;
+}
+
+.markdown-body .plan-choice-radio {
+  position: absolute;
+  left: 15px;
+  top: 18px;
+}
+
+.markdown-body .plan-choice-exp {
+  color: #999;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.markdown-body .plan-choice-seat-breakdown {
+  margin-top: 10px;
+  display: none;
+}
+
+.markdown-body :checked+.radio-label {
+  z-index: 1;
+  position: relative;
+  border-color: #4078c0;
+}
+
+@media print {
+  body .markdown-body {
+    padding: 0;
+    border: none;
+  }
+}
+</style><title>records</title></head><body><article class="markdown-body"><h1>
+<a id="user-content-records" class="anchor" href="#records" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Records</h1>
+<p><em>Progress and process of Omeka-based work that doesn't show up in Git history. (Most prominently, but not exclusively, Neatline exhibits.)</em></p>
+<h2>
+<a id="user-content-april-1-2018" class="anchor" href="#april-1-2018" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>April 1, 2018</h2>
+<ul>
+<li>
+<p>Neatline editor: add default zoom</p>
+<ul>
+<li>Hard for people to get back to the overview that contains both Boston &amp; Lowell like the one that shows on load.</li>
+<li>Providing a button for that makes it easier to switch between views as a user, and eliminates stress of realizing there's no way to get back to the original view you had on load.</li>
+<li><em>NB: just labeling it 'Default View' for right now, but name can be changed to whatever is most appropriate.</em></li>
+</ul>
+</li>
+<li>
+<p>Article on how to create a custom Neatline theme <a href="http://neatline.org/2014/04/01/creating-themes-for-individual-neatline-exhibits/" rel="nofollow">here</a></p>
+</li>
+</ul>
+<h2>
+<a id="user-content-april-7-2018" class="anchor" href="#april-7-2018" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>April 7, 2018</h2>
+<ul>
+<li>
+<p>Neatline editor: add above edits to actual site, not just local Neatline copy</p>
+</li>
+<li>
+<p>From the site:</p>
+</li>
+</ul>
+<blockquote>
+<h3>
+<a id="user-content-getting-started-creating-the-theme-directory" class="anchor" href="#getting-started-creating-the-theme-directory" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Getting started: Creating the theme directory</h3>
+<p>Neatline themes are created as directories that sit inside of the Omeka theme. For any given exhibit, Neatline will look for a theme directory that has the same name as the “URL slug” of the exhibit, the unique, plain-text identifier used to form the end of the exhibit’s public-facing URL. So, imagine you’ve got an exhibit called “Test Exhibit,” with a URL slug of <code>test-exhibit</code>. To create a theme for the exhibit, create a directory called test-exhibit at this location relative to the root of your Omeka theme:</p>
+<p><code>[omeka-theme]/neatline/exhibits/themes/test-exhibit</code></p>
+</blockquote>
+<ul>
+<li>
+<strong>Side Note:</strong> this (below) seems... not great. I really don't like the attitude implied here and suspect it may have something to do with why Omeka/Neatline documentation thus far has been shoddy. Maybe I'm just naive; I just feel like people should have access to the code with a disclaimer sooner rather than later. From the Neatline theme tutorial:</li>
+</ul>
+<blockquote>
+<p>I’ve held off on documenting this publicly because I wanted to be sure that the file structure and Javacsript APIs used in the themes worked well at scale – but at this point it’s all pretty battle tested, and I’m curious to see what other folks can come up with!</p>
+</blockquote>
+<p>Especially because people are less likely to do documentation in a systematized way afterwards rather than at the time, but they could've had this whole thing written up in advance, to be sure. (Ensure it's not Jeremy who wrote this though, before you mention it to him with such a tone; also, keep in mind there might be perfectly legitimate reasons why people do this and you're just reading it in a biased way because of your prior context.) Like, the file structure is something people should be able to understand!!! Agh.</p>
+<h3>
+<a id="user-content-our-github" class="anchor" href="#our-github" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Our GitHub:</h3>
+<ul>
+<li>This will prob be useful when we're taking on the new Neatline: <a href="https://github.com/scholarslab/neatline-theme-template">our repo</a> containing Neatline custom theme starter files.</li>
+</ul>
+<h2>
+<a id="user-content-april-8-2018" class="anchor" href="#april-8-2018" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>April 8, 2018</h2>
+<ul>
+<li>Cool so we legit don't explain anywhere that we use Underscore.js templating for Neatline. ("We" being the default voice I'm taking with this; the SLab could've had nothing to do with that lack of documentation.)
+<ul>
+<li>The place where the templates are printed is preceded with a comment that says "Underscore templates.", and the templates are in a directory called <code>underscore</code>, but it's not at all clear <em>why</em> it's called that contextually.</li>
+<li>(Like, I have a note on my hand-copy of the <code>exhibit.php</code> partial that says "what's underscore mean? is dir but name confusing". I discovered it after looking up what <code>rv-html</code> meant, although it's kind of happenstance that I put that together; I probably wouldn't have if I didn't go on the Rivets.js website.)</li>
+</ul>
+</li>
+</ul>
+<h1>
+<a id="user-content-part-ii-august-2018-notes" class="anchor" href="#part-ii-august-2018-notes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Part II: August 2018 Notes</h1>
+<ul>
+<li>Date: <strong>8/15/18</strong>
+</li>
+</ul>
+<h2>
+<a id="user-content-where-things-stand" class="anchor" href="#where-things-stand" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Where things stand:</h2>
+<ol>
+<li>Tbh, trying to remember what all I had figured out...</li>
+<li>Big tasks:
+<ul>
+<li>Put navbar into dynamic view file</li>
+<li>Change colors in exhibit</li>
+<li>Fix text layout in exhibit</li>
+<li>Ideally, have each text section have a "read more..." button, since they're quite long</li>
+<li>Make the name of each item come up on hover (highlighted areas on map)</li>
+<li>
+<em>Possibly</em> format the popups on exhibit items</li>
+</ul>
+</li>
+<li>Big questions:
+<ul>
+<li>Where are the relevant CSS files, and how can I edit them?</li>
+<li>Have I solved this problem before?</li>
+<li>Where is the navbar stored?</li>
+<li>What is this JS templating nonsense I was talking abbout? Do I need to mess with it?</li>
+</ul>
+</li>
+</ol>
+<h3>
+<a id="user-content-file-locations" class="anchor" href="#file-locations" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>File locations</h3>
+<ul>
+<li>Where to put Neatline theme customizations:</li>
+</ul>
+<pre lang="git"><code>&gt; lowell/themes/maplowell/neatline/exhibits/themes/following-the-money
+</code></pre>
+<ul>
+<li>Structure of Neatline theme:</li>
+</ul>
+<pre lang="git"><code>following-the-money/
+	- assets/
+		- css/
+			- _partials/
+			- style.scss
+		- js/
+	- style.css
+	- script.js
+	- show.php
+	- item.php
+</code></pre>
+<ul>
+<li>With asset preprocessing via taskrunner:</li>
+</ul>
+<pre lang="git"><code>following-the-money/
+	- assets/
+		- css/
+			- _partials/
+			- style.scss
+		- js/
+	- node_modules/
+	- style.css
+	- script.js
+	- show.php
+	- item.php
+	- .babelrc
+	- gulpfile.js
+	- package.json
+	- package-lock.json
+</code></pre>
+<h3>
+<a id="user-content-useful-functions" class="anchor" href="#useful-functions" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Useful functions:</h3>
+<ul>
+<li>Views.php, line 110: return number of records in exhibit</li>
+</ul>
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"><span class="pl-c"><span class="pl-c">/**</span></span></span>
+<span class="pl-s1"><span class="pl-c"> * Count the records in an exhibit.</span></span>
+<span class="pl-s1"><span class="pl-c"> *</span></span>
+<span class="pl-s1"><span class="pl-c"> * <span class="pl-k">@param</span> NeatlineExhibit $exhibit The exhibit record.</span></span>
+<span class="pl-s1"><span class="pl-c"> * <span class="pl-k">@return</span> integer The number of records.</span></span>
+<span class="pl-s1"><span class="pl-c"> <span class="pl-c">*/</span></span></span>
+<span class="pl-s1"><span class="pl-k">function</span> <span class="pl-en">nl_getExhibitRecordCount</span>(<span class="pl-smi">$exhibit</span><span class="pl-k">=</span><span class="pl-c1">null</span>)</span>
+<span class="pl-s1">{</span>
+<span class="pl-s1">    <span class="pl-smi">$exhibit</span> <span class="pl-k">=</span> <span class="pl-smi">$exhibit</span> ? <span class="pl-smi">$exhibit</span> : nl_getExhibit();</span>
+<span class="pl-s1">    <span class="pl-k">return</span> (<span class="pl-k">int</span>) <span class="pl-smi">$exhibit</span><span class="pl-k">-&gt;</span>getNumberOfRecords();</span>
+<span class="pl-s1">}</span></pre></div>
+<ul>
+<li>Right below, same file: return markup for exhibit (map stuff) &amp; narrative (text stuff), respectively</li>
+</ul>
+<p><strong>Map:</strong></p>
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"><span class="pl-c"><span class="pl-c">/**</span></span></span>
+<span class="pl-s1"><span class="pl-c"> * Render and return the exhibit partial.</span></span>
+<span class="pl-s1"><span class="pl-c"> *</span></span>
+<span class="pl-s1"><span class="pl-c"> * <span class="pl-k">@return</span> string The exhibit markup.</span></span>
+<span class="pl-s1"><span class="pl-c"> <span class="pl-c">*/</span></span></span>
+<span class="pl-s1"><span class="pl-k">function</span> <span class="pl-en">nl_getExhibitMarkup</span>()</span>
+<span class="pl-s1">{</span>
+<span class="pl-s1">    <span class="pl-k">return</span> get_view()<span class="pl-k">-&gt;</span>partial(<span class="pl-s"><span class="pl-pds">'</span>exhibits/partials/exhibit.php<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1">}</span></pre></div>
+<p><strong>Text:</strong></p>
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"><span class="pl-c"><span class="pl-c">/**</span></span></span>
+<span class="pl-s1"><span class="pl-c"> * Render and return the exhibit narrative partial.</span></span>
+<span class="pl-s1"><span class="pl-c"> *</span></span>
+<span class="pl-s1"><span class="pl-c"> * <span class="pl-k">@return</span> string The narrative markup.</span></span>
+<span class="pl-s1"><span class="pl-c"> <span class="pl-c">*/</span></span></span>
+<span class="pl-s1"><span class="pl-k">function</span> <span class="pl-en">nl_getNarrativeMarkup</span>()</span>
+<span class="pl-s1">{</span>
+<span class="pl-s1">    <span class="pl-k">return</span> get_view()<span class="pl-k">-&gt;</span>partial(<span class="pl-s"><span class="pl-pds">'</span>exhibits/partials/narrative.php<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1">}</span></pre></div>
+<ul>
+<li>Neatline Globals function used in <code>exhibit.php</code> to return exhibit data:</li>
+</ul>
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"><span class="pl-c"><span class="pl-c">/**</span></span></span>
+<span class="pl-s1"><span class="pl-c"> * Gather global properties exposed via the `neatline_globals` filter.</span></span>
+<span class="pl-s1"><span class="pl-c"> *</span></span>
+<span class="pl-s1"><span class="pl-c"> * <span class="pl-k">@param</span> NeatlineExhibit $exhibit The exhibit.</span></span>
+<span class="pl-s1"><span class="pl-c"> * <span class="pl-k">@return</span> array The modified array of key =&gt; values.</span></span>
+<span class="pl-s1"><span class="pl-c"> <span class="pl-c">*/</span></span></span>
+<span class="pl-s1"><span class="pl-k">function</span> <span class="pl-en">nl_getGlobals</span>(<span class="pl-smi">$exhibit</span>)</span>
+<span class="pl-s1">{</span>
+<span class="pl-s1">    <span class="pl-k">return</span> apply_filters(<span class="pl-s"><span class="pl-pds">'</span>neatline_globals<span class="pl-pds">'</span></span>, <span class="pl-c1">array</span>(), <span class="pl-c1">array</span>(</span>
+<span class="pl-s1">        <span class="pl-s"><span class="pl-pds">'</span>exhibit<span class="pl-pds">'</span></span> <span class="pl-k">=&gt;</span> <span class="pl-smi">$exhibit</span></span>
+<span class="pl-s1">    ));</span>
+<span class="pl-s1">}</span></pre></div>
+</article></body></html>

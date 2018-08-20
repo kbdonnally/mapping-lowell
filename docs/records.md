@@ -63,13 +63,13 @@ Especially because people are less likely to do documentation in a systematized 
 
 - Where to put Neatline theme customizations:
 
-```
+```git
 > lowell/themes/maplowell/neatline/exhibits/themes/following-the-money
 ```
 
 - Structure of Neatline theme:
 
-```
+```git
 following-the-money/
 	- assets/
 		- css/
@@ -84,7 +84,7 @@ following-the-money/
 
 - With asset preprocessing via taskrunner:
 
-```
+```git
 following-the-money/
 	- assets/
 		- css/
@@ -104,15 +104,16 @@ following-the-money/
 
 ### Useful functions:
 
-- Views.php, line 110: return number of records in exhibit
+1. **# Records in Exhibit:** Views.php, line 110: return number of records in exhibit
 
-```
+```php
 /**
  * Count the records in an exhibit.
  *
  * @param NeatlineExhibit $exhibit The exhibit record.
  * @return integer The number of records.
  */
+
 function nl_getExhibitRecordCount($exhibit=null)
 {
     $exhibit = $exhibit ? $exhibit : nl_getExhibit();
@@ -120,45 +121,48 @@ function nl_getExhibitRecordCount($exhibit=null)
 }
 ```
 
-- Right below, same file: return markup for exhibit (map stuff) & narrative (text stuff), respectively
+...Right below, same file: return markup for exhibit (map stuff) & narrative (text stuff), respectively
 
-**Map:**
+2. **HTML for Map:**
 
-```
+```php
 /**
  * Render and return the exhibit partial.
  *
  * @return string The exhibit markup.
  */
+
 function nl_getExhibitMarkup()
 {
     return get_view()->partial('exhibits/partials/exhibit.php');
 }
 ```
 
-**Text:**
+3. **HTML for Narrative:**
 
-```
+```php
 /**
  * Render and return the exhibit narrative partial.
  *
  * @return string The narrative markup.
  */
+
 function nl_getNarrativeMarkup()
 {
     return get_view()->partial('exhibits/partials/narrative.php');
 }
 ```
 
-- Neatline Globals function used in `exhibit.php` to return exhibit data:
+4. **Exhibit JSON:** Neatline Globals function used in `exhibit.php` to return exhibit data:
 
-```
+```php
 /**
  * Gather global properties exposed via the `neatline_globals` filter.
  *
  * @param NeatlineExhibit $exhibit The exhibit.
  * @return array The modified array of key => values.
  */
+
 function nl_getGlobals($exhibit)
 {
     return apply_filters('neatline_globals', array(), array(
