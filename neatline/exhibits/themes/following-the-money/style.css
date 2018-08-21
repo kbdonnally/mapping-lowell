@@ -2,43 +2,6 @@
  * Mapping Lowell, Custom Exhibit Theme
  * author: Katherine Donnally
  */
-/**
- * Custom Neatline theme for Following the Money
- */
-/* General Styles: */
-.neatline #content {
-  padding: 0 4.167%; }
-  @media screen and (min-width: 600px) {
-    .neatline #content {
-      padding: 0 8.33%; } }
-
-/* Title: */
-.exhibit__narrative h3 {
-  border-bottom: 2px solid #ccfeff; }
-.exhibit__narrative h3 > * {
-  margin-top: 1.5em;
-  margin-bottom: .5em;
-  padding-bottom: .5em;
-  font-size: 1rem;
-  font-weight: 400;
-  font-family: "Playfair Display", serif;
-  line-height: 1 !important; }
-  @media screen and (min-width: 600px) {
-    .exhibit__narrative h3 > * {
-      font-size: 1.5rem; } }
-  @media screen and (min-width: 768px) {
-    .exhibit__narrative h3 > * {
-      font-size: 1.75rem; } }
-  @media screen and (min-width: 1024px) {
-    .exhibit__narrative h3 > * {
-      font-size: 2rem; } }
-
-/* Fullscreen link: */
-a.nl-fullscreen {
-  display: inline-block;
-  margin-bottom: 1em; }
-
-/* Python-generated CSS classes: */
 /* Bubble Template Styles: */
 #static-bubble {
   overflow-y: auto;
@@ -78,6 +41,46 @@ a.nl-fullscreen {
   #neatline #static-bubble.bound {
     display: block; }
 
+/**
+ * Custom Neatline theme for Following the Money
+ */
+/* General Styles: */
+.neatline #content {
+  padding: 0 4.167%; }
+  @media screen and (min-width: 600px) {
+    .neatline #content {
+      padding: 0 8.33%; } }
+
+/* Title: */
+.exhibit__narrative h3 {
+  border-bottom: 2px solid #ccfeff; }
+.exhibit__narrative h3 > * {
+  margin-top: 1.5em;
+  margin-bottom: .5em;
+  padding-bottom: .5em;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Playfair Display", serif;
+  line-height: 1 !important; }
+  @media screen and (min-width: 600px) {
+    .exhibit__narrative h3 > * {
+      font-size: 1.5rem; } }
+  @media screen and (min-width: 768px) {
+    .exhibit__narrative h3 > * {
+      font-size: 1.75rem; } }
+  @media screen and (min-width: 1024px) {
+    .exhibit__narrative h3 > * {
+      font-size: 2rem; } }
+
+/* Fullscreen link: */
+a.nl-fullscreen {
+  display: inline-block;
+  margin-bottom: 1em; }
+
+/* Python-generated CSS classes: */
+.exhibit-main-content {
+  position: relative; }
+
 /* Exhibit: */
 #neatline-map {
   position: relative;
@@ -88,11 +91,12 @@ a.nl-fullscreen {
   position: absolute;
   z-index: 999; }
 
-/* Neatline Narrative Styles: */
+/* Narrative: */
 #neatline-narrative {
   padding-right: 0;
   margin: 0; }
 
+/* Waypoints: */
 /* Original Plugin Styles: */
 #waypoints {
   background: #fff;

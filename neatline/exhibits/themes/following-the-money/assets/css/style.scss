@@ -3,15 +3,7 @@
  * author: Katherine Donnally
  */
 
-// overall styles
-@import "_sass/wrapper-styles";
-
-// original styles
-// @import "_sass/neatline-original";
-// @import "_sass/waypoints-original";
-
-// section styles
+// modal template styles
 @import "_sass/bubble.scss";
+// exhibit itself
 @import "_sass/exhibit.scss";
-@import "_sass/narrative.scss";
-@import "_sass/waypoints.scss";

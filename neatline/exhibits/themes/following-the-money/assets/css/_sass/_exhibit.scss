@@ -1,3 +1,83 @@
+/**
+ * Custom Neatline theme for Following the Money
+ */
+
+/* General Styles: */
+
+// colors
+$themeblue: hsla(181,100%,90%,1);
+
+.neatline {
+	#content {
+		padding: 0 4.167%;
+		@media screen and (min-width: 600px) {
+			padding: 0 8.33%;
+		}
+	}
+}
+
+/* Title: */
+
+.exhibit__narrative {
+	h3 {
+		border-bottom: 2px solid $themeblue;
+	}
+	h3 > * {
+		margin-top: 1.5em;
+		margin-bottom: .5em;
+		padding-bottom: .5em;
+		font-size: 1rem;
+		font-weight: 400;
+		font-family: "Playfair Display", serif;
+		line-height: 1 !important;
+		
+		@media screen and (min-width: 600px) {
+			font-size: 1.5rem;
+		}
+		@media screen and (min-width: 768px) {
+			font-size: 1.75rem;
+		}
+		@media screen and (min-width: 1024px) {
+			font-size: 2rem;
+		}	
+	}
+	
+}
+
+/* Fullscreen link: */
+
+a.nl-fullscreen {
+    display: inline-block;
+    margin-bottom: 1em;
+}
+
+/* Python-generated CSS classes: */
+
+.exhibit-wrapper {
+
+}
+
+.exhibit-landing {
+
+}
+
+.exhibit-landing__title {
+
+}
+
+.exhibit-main-content {
+	position: relative;
+//	display: flex;
+}
+
+.exhibit__map {
+
+}
+
+.exhibit__narrative {
+
+}
+
 /* Exhibit: */
 
 #neatline-map {
@@ -9,4 +89,80 @@
     opacity: .9;
     position: absolute;
     z-index: 999;
+}
+
+/* Narrative: */
+
+#neatline-narrative {
+	padding-right: 0;
+	margin: 0;
+	// inside this is just gonna be plain HTML
+	// looks like it's mostly <h3><p>....<h3><p>...
+	// so use JS to add boxes around those
+}
+
+/* Waypoints: */
+
+/* Original Plugin Styles: */
+
+#waypoints {
+    background: #fff;
+    font-size: 1.4em;
+    border-radius: 2px;
+    overflow-y: auto;
+    color: #000;
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    a.title {
+        padding: .5em 1em;
+        display: list-item;
+        list-style: none;
+        cursor: pointer;
+        line-height: 1.4em;
+        font-weight: 300;
+        &:hover {
+            text-decoration: none;
+        }
+        &.highlighted {
+            background: #e0f5ff;
+        }
+        &.selected {
+            background: #08c;
+            color: #fff;
+        }
+    }
+}
+
+#neatline #waypoints {
+    max-width: 300px;
+    max-height: 80%;
+    right: 40px;
+    top: 40px;
+    &.empty {
+        display: none;
+    }
+}
+
+// oops found more
+
+#neatline.Waypoints.Simile {
+    .olControlLayerSwitcher {
+        right: 25%;
+    }
+    #waypoints {
+        top: 0;
+        right: 0;
+        height: 100%;
+        max-height: 100%;
+        width: 25%;
+        max-width: 25%;
+    }
+    #simile {
+        bottom: 0;
+        left: 0;
+        height: 20%;
+        width: 75%;
+    }
 }
