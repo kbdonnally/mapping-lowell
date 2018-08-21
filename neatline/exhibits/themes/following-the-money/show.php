@@ -11,14 +11,14 @@
 
 <?php
 /* Functions: */
-function get_markup($filename, $filepath = 'exhibits/partials')
+function import_file($filename, $filepath = 'exhibits/partials')
 {
 	return get_view()->partial($filepath . '/' . $filename . '.php');
 }
 
 /* Variables: */
 $title 		 = nl_getExhibitField('title');
-$testPartial = get_markup('test');
+$testPartial = import_file('test');
 ?>
 
 <?php echo head(array(
