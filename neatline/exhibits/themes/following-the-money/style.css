@@ -1,6 +1,6 @@
 /**
- * Mapping Lowell, Custom Exhibit Theme
- * author: Katherine Donnally
+ * Custom Neatline theme for Following the Money
+ * Author: Katherine Donnally
  */
 /* Bubble Template Styles: */
 #static-bubble {
@@ -41,17 +41,44 @@
   #neatline #static-bubble.bound {
     display: block; }
 
-/**
- * Custom Neatline theme for Following the Money
- */
-/* General Styles: */
-.neatline #content {
+/* Exhibit: */
+/* General styles: */
+body.neatline > header {
+  display: flex;
+  max-width: 100vw; }
+body.neatline #content {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0; }
+
+/* Landing: */
+.exhibit-landing {
   padding: 0 4.167%; }
   @media screen and (min-width: 600px) {
-    .neatline #content {
+    .exhibit-landing {
       padding: 0 8.33%; } }
 
-/* Title: */
+/* Page title: */
+@media screen and (min-width: 1200px) {
+  .exhibit-landing__title {
+    font-size: 3rem !important; } }
+
+/* Fullscreen link: */
+a.nl-fullscreen {
+  display: inline-block;
+  margin-bottom: 1em; }
+
+/* CSS snippet:
+
+padding: 0 4.167%;
+@media screen and (min-width: 600px) {
+	padding: 0 8.33%;
+}
+*/
+.exhibit-main-content {
+  position: relative; }
+
 .exhibit__narrative h3 {
   border-bottom: 2px solid #ccfeff; }
 .exhibit__narrative h3 > * {
@@ -71,15 +98,6 @@
   @media screen and (min-width: 1024px) {
     .exhibit__narrative h3 > * {
       font-size: 2rem; } }
-
-/* Fullscreen link: */
-a.nl-fullscreen {
-  display: inline-block;
-  margin-bottom: 1em; }
-
-/* Python-generated CSS classes: */
-.exhibit-main-content {
-  position: relative; }
 
 /* Exhibit: */
 #neatline-map {

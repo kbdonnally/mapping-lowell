@@ -1,22 +1,69 @@
-/**
- * Custom Neatline theme for Following the Money
- */
+/* Exhibit: */
 
-/* General Styles: */
+/* General styles: */
 
 // colors
 $themeblue: hsla(181,100%,90%,1);
 
-.neatline {
+body.neatline {
+	// TEMPORARY:
+	& > header {
+		display: flex;
+		max-width: 100vw;
+	}
 	#content {
-		padding: 0 4.167%;
-		@media screen and (min-width: 600px) {
-			padding: 0 8.33%;
-		}
+		position: relative;
+		width: 100%;
+		margin: 0;
+		padding: 0;
 	}
 }
 
-/* Title: */
+.exhibit-wrapper {
+
+}
+
+/* Landing: */
+
+.exhibit-landing {
+	padding: 0 4.167%;
+	@media screen and (min-width: 600px) {
+		padding: 0 8.33%;
+	}
+}
+
+/* Page title: */
+
+// also see main theme
+.exhibit-landing__title {
+	@media screen and (min-width: 1200px) {
+		font-size: 3rem !important;
+	}
+}
+
+/* Fullscreen link: */
+
+a.nl-fullscreen {
+    display: inline-block;
+    margin-bottom: 1em;
+}
+
+/* CSS snippet:
+
+padding: 0 4.167%;
+@media screen and (min-width: 600px) {
+	padding: 0 8.33%;
+}
+*/
+
+.exhibit-main-content {
+	position: relative;
+//	display: flex;
+}
+
+.exhibit__map {
+
+}
 
 .exhibit__narrative {
 	h3 {
@@ -41,41 +88,6 @@ $themeblue: hsla(181,100%,90%,1);
 			font-size: 2rem;
 		}	
 	}
-	
-}
-
-/* Fullscreen link: */
-
-a.nl-fullscreen {
-    display: inline-block;
-    margin-bottom: 1em;
-}
-
-/* Python-generated CSS classes: */
-
-.exhibit-wrapper {
-
-}
-
-.exhibit-landing {
-
-}
-
-.exhibit-landing__title {
-
-}
-
-.exhibit-main-content {
-	position: relative;
-//	display: flex;
-}
-
-.exhibit__map {
-
-}
-
-.exhibit__narrative {
-
 }
 
 /* Exhibit: */
