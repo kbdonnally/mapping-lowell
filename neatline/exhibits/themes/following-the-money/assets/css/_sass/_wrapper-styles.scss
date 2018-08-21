@@ -1,7 +1,8 @@
-/*!
+/**
  * Custom Neatline theme for Following the Money
- * NB: in no real order since still deciphering elements.
  */
+
+/* General Styles: */
 
 .neatline {
 	#content {
@@ -12,7 +13,11 @@
 	}
 }
 
-#neatline-narrative {
-	padding-right: 0;
-	margin: 0;
+/* Title: */
+
+/* Fullscreen link: */
+
+a.nl-fullscreen {
+    display: inline-block;
+    margin-bottom: 1em;
 }

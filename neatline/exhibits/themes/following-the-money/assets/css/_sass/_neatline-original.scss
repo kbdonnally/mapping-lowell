@@ -1,0 +1,84 @@
+/* Original Exhibit Styles: */
+
+#static-bubble {
+    overflow-y: auto;
+    position: absolute;
+    background: #fff;
+    border-radius: 2px;
+    color: #000;
+    padding: 1em;
+    max-height: 90%;
+    max-width: 400px;
+    left: 70px;
+    top: 20px;
+    opacity: 0.85;
+    .close {
+        display: none;
+        cursor: pointer;
+        font-weight: 400;
+        margin-left: .4em;
+        float: right;
+    }
+    .title {
+        display: inline;
+        font-size: 2em;
+        line-height: 1em;
+    }
+    .content {
+        display: none;
+        margin-top: 0.7em;
+    }
+    &.selected {
+        opacity: 0.9;
+        .close, .content {
+            display: block;
+        }
+    }
+    img {
+        max-width: 100%;
+    }
+}
+
+#neatline #static-bubble {
+    z-index: 1000;
+    display: none;
+    &.bound {
+        display: block;
+    }
+}
+
+a.nl-fullscreen {
+    display: inline-block;
+    margin-bottom: 1em;
+}
+
+#neatline.Waypoints.Simile {
+    .olControlLayerSwitcher {
+        right: 25%;
+    }
+    #waypoints {
+        top: 0;
+        right: 0;
+        height: 100%;
+        max-height: 100%;
+        width: 25%;
+        max-width: 25%;
+    }
+    #simile {
+        bottom: 0;
+        left: 0;
+        height: 20%;
+        width: 75%;
+    }
+}
+
+#neatline-map {
+    position: relative;
+    height: 800px;
+}
+
+#neatline .widget {
+    opacity: .9;
+    position: absolute;
+    z-index: 999;
+}

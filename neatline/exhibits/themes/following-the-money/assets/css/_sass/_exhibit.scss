@@ -1,0 +1,12 @@
+/* Exhibit: */
+
+#neatline-map {
+    position: relative;
+    height: 800px;
+}
+
+#neatline .widget {
+    opacity: .9;
+    position: absolute;
+    z-index: 999;
+}

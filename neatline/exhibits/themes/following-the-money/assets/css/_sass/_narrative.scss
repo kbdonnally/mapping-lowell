@@ -1,0 +1,9 @@
+/* Neatline Narrative Styles: */
+
+#neatline-narrative {
+	padding-right: 0;
+	margin: 0;
+	// inside this is just gonna be plain HTML
+	// looks like it's mostly <h3><p>....<h3><p>...
+	// so use JS to add boxes around those
+}

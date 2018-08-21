@@ -1,11 +1,17 @@
-/*!
+/**
  * Mapping Lowell, Custom Exhibit Theme
  * author: Katherine Donnally
  */
 
+// overall styles
+@import "_sass/wrapper-styles";
 
-@import "_sass/neatline-public";
-//@import "_sass/text-public";
-// @import "_sass/waypoints-editor";
-//@import "_sass/waypoints-public";
-@import "_sass/follow-the-money";
+// original styles
+// @import "_sass/neatline-original";
+// @import "_sass/waypoints-original";
+
+// section styles
+@import "_sass/bubble.scss";
+@import "_sass/exhibit.scss";
+@import "_sass/narrative.scss";
+@import "_sass/waypoints.scss";
