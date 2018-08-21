@@ -188,3 +188,128 @@ $ npm install -y
 ```
 sass --watch --sourcemap=none assets/css/style.scss:./style.css
 ```
+
+## Inserting Partial Files
+
+*THIS TOOK FOR FUCKING EVER TO FIGURE OUT OMFG.*
+
+- The code that fetches markup from a given location is:
+
+```php
+<?php echo get_view()->partial('filepath/filename.php') ?>
+```
+
+This method can arbitrarily fetch files, so you're not bound by the Omeka pre-defined functions (or the Neatline ones).
+
+- What took so long, though, is figuring out the method's frame of reference for the filepath. If using in a Neatline exhibit, it looks like the following code is needed for context:
+  - Anything further down than 'exhibits' as a starting directory wouldn't load.
+
+```php
+<!-- test partial theory: -->
+<?php echo get_view()->partial('exhibits/themes/following-the-money/partials/test.php'); ?>
+```
+
+*NB:* 1) replace 'following-the-money' with your own exhibit name, and 2) 'partials' is an arbitrary directory name; it can be anything.
+
+- `test.php` contained:
+
+```php
+<!-- testing if the file paths are hard-coded in -->
+
+<ul>
+	<li>Does this work?</li>
+	<li><?php echo nl_getExhibitLink(
+  null, 'fullscreen', __('View Fullscreen'), array('class' => 'nl-fullscreen')
+); ?></li>
+</ul>
+```
+
+### Shortening Filepaths
+
+- This has me wondering if just 'exhibits' has to be the start of the path, to use it in a Neatline context?
+
+- Consequently, could I just put a file in `exhibits/partials/*.php`?
+
+  - **Update: yes, it works!**
+
+  - Awesome awesome awesome.
+
+- So, now we end up with the following (simplified) file structure for our theme:
+
+```
+# assume 'maplowell' as root directory
+
+- common/
+	- header.php
+	- footer.php
+- neatline/
+	- exhibits/
+		- partials/
+			- test2.php # shorter path!
+		- themes/
+			- following-the-money/
+				- assets/
+					- _sass/
+						*.scss
+					- style.scss
+				- partials/
+					- test1.php # long path
+				- show.php
+				- style.css
+```
+
+Let's delete the `partials` directory that's down in our Neatline theme, leaving the one under `exhibits` intact.
+
+### Updated structure:
+
+```
+- common/
+	- header.php
+	- footer.php
+- neatline/
+	- exhibits/
+		- partials/
+			- test.php
+		- themes/
+			- following-the-money/
+				- assets/
+					- _sass/
+						*.scss
+					- style.scss
+				- show.php
+				- style.css
+```
+
+With the function call:
+
+```php
+<!-- following-the-money/show.php -->
+
+<?php echo get_view()->partial('exhibits/partials/test.php'); ?>
+```
+
+Retrospectively, this makes sense, because 'exhibits' is the first directory that's a parent both of `show.php` and `test.php`. 
+
+### Generalized function:
+
+- Wrote function to fetch any markup so this wouldn't be such a bitch to do in the future.
+
+- Returns a PHP file, with directory path `$filepath` (default = the one we used above) and file name `$filename`. Both arguments are strings.
+
+```php
+<?php
+// define
+function get_markup($filename, $filepath = 'exhibits/partials')
+{
+	return get_view()->partial($filepath . '/' . $filename . '.php');
+}
+
+// call
+$testPartial = get_markup('test');
+?>
+
+<!-- usage -->
+<div><?php echo $testPartial; ?></div>
+```
+
+`/end (8/20/18)`
