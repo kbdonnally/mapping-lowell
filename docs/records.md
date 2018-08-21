@@ -312,4 +312,7 @@ $testPartial = get_markup('test');
 <div><?php echo $testPartial; ?></div>
 ```
 
-`/end (8/20/18)`
+## Editing `show.php` layout
+
+*Finally!!! This starts the phase of actually changing the files and knowing what it'll do.*
+
