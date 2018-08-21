@@ -21,28 +21,28 @@ $title 		 = nl_getExhibitField('title');
 $testPartial = import_file('test');
 ?>
 
+<!-- head & header: -->
 <?php echo head(array(
   'title' => $title,
   'bodyclass' => 'neatline show'
 )); ?>
 
-<!-- Exhibit title: -->
+<!-- page title: -->
 <h1><?php echo $title; ?></h1>
 
-<!-- test partial theory: -->
+<!-- file import test: -->
 <?php echo $testPartial; ?>
 
-<!-- "View Fullscreen" link: -->
+<!-- fullscreen: -->
 <?php echo nl_getExhibitLink(
   null, 'fullscreen', __('View Fullscreen'), array('class' => 'nl-fullscreen')
 ); ?>
 
-<!-- Exhibit and description: -->
-
-<!-- lowell/plugins/Neatline/views/shared/exhibits/partials/[exhibit|narrative].php -->
+<!-- exhibit: -->
 <?php echo nl_getExhibitMarkup(); ?>
+
+<!-- narrative: -->
 <?php echo nl_getNarrativeMarkup(); ?>
 
-<!-- Footer: 
-	 lowell/themes/maplowell/common/footer.php -->
+<!-- footer: -->
 <?php echo foot(); ?>

@@ -316,3 +316,10 @@ $testPartial = get_markup('test');
 
 *Finally!!! This starts the phase of actually changing the files and knowing what it'll do.*
 
+Locations of some files from HTML comments:
+
+```html
+<!-- lowell/plugins/Neatline/views/shared/exhibits/partials/[exhibit|narrative].php -->
+
+<!-- lowell/themes/maplowell/common/footer.php ... once made -->
+```
