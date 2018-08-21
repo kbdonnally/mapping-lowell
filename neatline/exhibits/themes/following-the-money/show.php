@@ -28,19 +28,27 @@ $narrative 	 = import_file('narrative');
   'bodyclass' => 'neatline show'
 )); ?>
 
-<!-- page title -->
-<h1><?php echo $title; ?></h1>
+<div class="exhibit-wrapper">
+	<div class="exhibit-landing">
+		<!-- page title -->
+		<h1 class="exhibit-landing__title"><?php echo $title; ?></h1>
 
-<!-- fullscreen -->
-<?php echo nl_getExhibitLink(
-  null, 'fullscreen', __('View Fullscreen'), array('class' => 'nl-fullscreen')
-); ?>
+		<!-- fullscreen -->
+		<?php echo nl_getExhibitLink(
+		  null, 'fullscreen', __('View Fullscreen'), array('class' => 'nl-fullscreen')
+		); ?>
+	</div> <!-- end intro -->
 
-<!-- exhibit -->
-<?php echo $exhibit; ?>
+	<div class="exhibit-main-content">
+		<section class="exhibit__map">
+			<?php echo $exhibit; ?>
+		</section>
 
-<!-- narrative -->
-<?php echo $narrative; ?>
+		<section class="exhibit__narrative">
+			<?php echo $narrative; ?>	
+		</section>
+	</div> <!-- end main content -->
+</div> <!-- end wrapper -->
 
 <!-- footer: -->
 <?php echo foot(); ?>
