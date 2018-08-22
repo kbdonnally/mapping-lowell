@@ -51,5 +51,7 @@ $js 		 = import_file('script.js', 'exhibits/themes/following-the-money/assets/js
 	</div> <!-- end main content -->
 </div> <!-- end wrapper -->
 
+<script type="text/javascript"><?php echo $js; ?></script>
+
 <!-- footer: -->
 <?php echo foot(); ?>
