@@ -323,3 +323,92 @@ Locations of some files from HTML comments:
 
 <!-- lowell/themes/maplowell/common/footer.php ... once made -->
 ```
+
+### Updates 8/21/18
+
+...ok we did some stuff, exhibit is "done"
+
+Tryna figure out navbar and header things. This was in `globals.php`:
+
+```php
+// Calls the hook 'after_save_item' with the arguments '$item' and '$arg2'
+fire_plugin_hook('after_save_item', array('item' => $item, 'foo' => $arg2));
+```
+
+...so this code:
+
+```php
+<?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
+```
+
+Means "call the hook 'public_header' with the argument '$this'". Still not super sure what hooks do.
+
+## Deployment notes
+
+### Exhibit layout
+
+- The NeatlineText `text-public.css` file overwrites some layout stuff. You'll need to comment out a good chunk of that file for exhibits to sit nicely.
+
+- In case you can't find it, here is the file you used:
+
+```css
+[data-neatline-slug] {
+	background: #e6e6e6;
+	cursor: pointer;
+	padding: 0 5px;
+}
+
+[data-neatline-slug].highlighted {
+	background: #ffff80
+}
+
+[data-neatline-slug].selected {
+	background: #0080bb;
+	color: #fff
+}
+/*
+body.neatline.show, body.neatline.fullscreen {
+	background: #fefefe;
+}
+
+body.neatline.show div#neatline-map, body.neatline.fullscreen div#neatline-map {
+	float: left;
+	width: 65%;
+}
+
+body.neatline.show div#neatline-map #neatline, body.neatline.fullscreen div#neatline-map #neatline, body.neatline.show div#neatline-map #neatline-map, body.neatline.fullscreen div#neatline-map #neatline-map {
+	height: 100%;
+	width: 100%
+}
+
+body.neatline.show div#neatline-narrative, body.neatline.fullscreen div#neatline-narrative {
+	float: right;
+	padding: 2em 3em;
+	width: 35%;
+	overflow-y: scroll
+}
+
+body.neatline.show div#neatline-narrative {
+	height: 800px
+}
+
+body.neatline.fullscreen div#neatline-narrative {
+	height: 100vh
+}
+*/
+```
+
+### Homepage
+
+- Dependent on secret code within the paragraphs as wrappers but should be fine if structure not extensively edited
+
+- Fix `<h3>` so font weight is 400
+
+### Text page layout
+
+- Something is messing with those; unsure what it is right now.
+
+### Menu
+
+- 2 menus appear at small size... not sure how to fix without writing a ton of JS to do so. You can still *use* the website with the double menu; it just looks kinda weird.
+

@@ -1,3 +1,6 @@
+/* Defaults: */
+@import "old-theme-useful"; // elems I'm not working on, so leaving to old theme
+
 /* General Styles: */
 
 * {
@@ -9,6 +12,7 @@
 body {
   margin: 0;
   padding: 0;
+  padding-top: 3rem;
   font-family: "Raleway", sans-serif;
   font-size: 1em;
   line-height: 1.5;
@@ -21,17 +25,13 @@ body {
 
 // Section titles
 [class*="__title"] {
-//  display: inline-block;
-//  height: 1.2em;
 	margin-bottom: .5em;
   font-family: "Playfair Display", serif;
 //	font-weight: 700;
   font-size: 2rem;
-//  background-color: hsla(181,100%,90%,1);
 }
 
 /* Partials: */
 
-@import "old-theme-useful"; // elems I'm not working on, so leaving to old theme
 @import "home";
 @import "navbar";

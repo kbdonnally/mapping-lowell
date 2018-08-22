@@ -11,6 +11,19 @@
 
 /* General Styles: */
 
+.page {
+	h1, h2, h3, h4, h5, h6, p {
+		padding: 0 4.167%;
+		@media screen and (min-width: 600px) {
+			padding: 0 8.33%;
+		}
+		@media screen and (min-width: 1200px) {
+			max-width: 800px;
+			margin: 0 auto;
+		}
+	}
+}
+
 /* Landing Page: */
 
 .home-landing-wrapper {
@@ -106,6 +119,9 @@
 	"teaching";
 	padding: 0 4.167%;
 	padding-top: 1em;
+	h3 {
+		font-weight: 400 !important;
+	}
 	@media screen and (min-width: 600px) {
 		padding: 0 8.33%;
 		padding-top: 1em;

@@ -23,7 +23,7 @@
     float: right; }
   #static-bubble .title {
     display: inline;
-    font-size: 2em;
+    font-size: 2rem;
     line-height: 1em; }
   #static-bubble .content {
     display: none;
@@ -57,23 +57,27 @@ body.neatline {
 
 /* Landing: */
 .exhibit-landing {
-  padding: 0 4.167%;
-  border-top: 2px solid #333; }
+  position: relative;
+  padding: 0 4.167%; }
   @media screen and (min-width: 600px) {
     .exhibit-landing {
       padding: 0 8.33%; } }
   @media screen and (min-width: 768px) {
     .exhibit-landing {
       display: flex;
+      justify-content: space-between;
       align-items: center;
       padding: 0 70px; } }
 
 /* Page title: */
 .exhibit-landing__title {
-  color: #333; }
-  @media screen and (min-width: 900px) {
+  position: relative;
+  color: #333;
+  margin: 1em 0 !important; }
+  @media screen and (min-width: 768px) {
     .exhibit-landing__title {
-      font-size: 2.5rem !important; } }
+      font-size: 2.5rem !important;
+      width: 66.67%; } }
   @media screen and (min-width: 1200px) {
     .exhibit-landing__title {
       font-size: 3rem !important; } }
@@ -102,8 +106,7 @@ padding: 0 4.167%;
   @media screen and (min-width: 900px) {
     .exhibit-main-content {
       flex-flow: row nowrap;
-      border-top: 2px solid #333;
-      border-bottom: 2px solid #333; } }
+      padding-bottom: 3rem; } }
 
 .exhibit__map {
   width: 100%; }
@@ -119,7 +122,9 @@ padding: 0 4.167%;
     .exhibit__narrative {
       width: 33.33%;
       max-height: 800px;
-      overflow-y: scroll; } }
+      overflow-y: scroll;
+      border-top: 2px solid #333;
+      border-bottom: 2px solid #333; } }
   .exhibit__narrative h3 {
     border-bottom: 2px solid #ccfeff; }
   .exhibit__narrative h3 > * {

@@ -28,13 +28,15 @@ body.neatline {
 /* Landing: */
 
 .exhibit-landing {
+	position: relative;
 	padding: 0 4.167%;
-	border-top: 2px solid #333;
+//	border-top: 2px solid #333;
 	@media screen and (min-width: 600px) {
 		padding: 0 8.33%;
 	}
 	@media screen and (min-width: 768px) {
 		display: flex;
+		justify-content: space-between;
 		align-items: center;
 		padding: 0 70px; // match map
 	}
@@ -44,9 +46,12 @@ body.neatline {
 
 // also see main theme
 .exhibit-landing__title {
+	position: relative;
 	color: #333;
-	@media screen and (min-width: 900px) {
+	margin: 1em 0 !important;
+	@media screen and (min-width: 768px) {
 		font-size: 2.5rem !important;
+		width: 66.67%;
 	}
 	@media screen and (min-width: 1200px) {
 		font-size: 3rem !important;
@@ -82,9 +87,8 @@ padding: 0 4.167%;
 	//	top: 0;
 		flex-flow: row nowrap;
 //		height: 100vh;
-//		margin-bottom: 3rem;
-		border-top: 2px solid #333;
-		border-bottom: 2px solid #333;
+		padding-bottom: 3rem;
+		
 	}
 }
 
@@ -92,7 +96,6 @@ padding: 0 4.167%;
 	width: 100%;
 	@media screen and (min-width: 900px) {
 		width: 66.67%;
-	//	max-height: 100vh;
 	}
 }
 
@@ -105,6 +108,8 @@ padding: 0 4.167%;
 		width: 33.33%;
 		max-height: 800px;
 		overflow-y: scroll;
+		border-top: 2px solid #333;
+		border-bottom: 2px solid #333;
 	}
 	h3 {
 		border-bottom: 2px solid $themeblue;

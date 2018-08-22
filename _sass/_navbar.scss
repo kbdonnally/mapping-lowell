@@ -19,7 +19,7 @@ $teal: hsla(181,100%,90%,1);
 	position: relative;
 	height: 3rem;
 	width: 3rem;
-	margin-left: 1rem;
+	margin-left: calc(70px - 3rem); // match neatline display
 	a {
 		display: inline-block;
 		height: 100%;
@@ -38,7 +38,7 @@ $teal: hsla(181,100%,90%,1);
 }
 
 .navbar__links {
-	padding-right: 2rem;
+	padding-right: 70px;
 	ul {
 		position: relative;
 		display: flex;
@@ -50,14 +50,18 @@ $teal: hsla(181,100%,90%,1);
 			display: inline-block;
 			height: 100%;
 			margin-right: 1rem;
+			&:last-of-type {
+				margin-right: 0;
+			}
 			a {
 				display: inline-block;
 				height: 100%;
 				padding-bottom: .25rem;
-				font-weight: bold;
+			//	font-family: "Playfair Display", serif;
+			//	font-weight: bold;
 				line-height: 1;
 				color: black;
-				border-bottom: 1px solid black;
+			//	border-bottom: 1px solid black;
 				-moz-transition: color .3s, border-bottom-color .3s;
 				-webkit-transition: color .3s, border-bottom-color .3s;
 				transition: color .3s, border-bottom-color .3s;

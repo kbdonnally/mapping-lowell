@@ -1,25 +1,4 @@
-/* General Styles: */
-* {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Raleway", sans-serif;
-  font-size: 1em;
-  line-height: 1.5; }
-
-[class*="title"] {
-  line-height: 1; }
-
-[class*="__title"] {
-  margin-bottom: .5em;
-  font-family: "Playfair Display", serif;
-  font-size: 2rem; }
-
-/* Partials: */
+/* Defaults: */
 /** 
  * Section: Old Defaults
  *
@@ -1196,13 +1175,13 @@ footer {
       float: right;
       width: auto; }
       #footer-content p.credits a {
-        background: url("../images/powered.png") no-repeat top left;
+        background: url("../img/powered.png") no-repeat top left;
         float: right;
         margin-left: 1px;
         text-indent: -9999px;
         width: 108px; }
         #footer-content p.credits a.designed {
-          background: url("../images/designed.png") no-repeat top left; }
+          background: url("../img/designed.png") no-repeat top left; }
         #footer-content p.credits a:hover {
           background-position: bottom; }
 
@@ -1253,11 +1232,11 @@ div#header-image-holder .held {
   margin: 120px auto 0;
   width: 960px; }
 
-#home h3 {
-  margin-bottom: 18px;
-  margin-top: 18px;
-  text-transform: uppercase; }
-
+/* #home h3 {
+    margin-bottom: 18px;
+    margin-top: 18px;
+    text-transform: uppercase;
+} */
 #featured-item h3 a:hover {
   color: #ff4f37; }
 #featured-item a:link, #featured-item a:visited {
@@ -1275,9 +1254,10 @@ div#header-image-holder .held {
 #featured-exhibit a:hover, #featured-exhibit a:active {
   color: #fff; }
 
+/*
 h2 {
-  text-transform: uppercase; }
-
+    text-transform: uppercase;
+} */
 #homepage-text {
   margin-top: -18px; }
 
@@ -1396,6 +1376,29 @@ a#advanced-search {
 
   .view-items-link a, #search-container input[type=text] {
     background-image: none; } }
+/* General Styles: */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 3rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 1em;
+  line-height: 1.5; }
+
+[class*="title"] {
+  line-height: 1; }
+
+[class*="__title"] {
+  margin-bottom: .5em;
+  font-family: "Playfair Display", serif;
+  font-size: 2rem; }
+
+/* Partials: */
 /**
  * 					Home - Table of Contents
  * --------------------------------------------------------------------
@@ -1407,6 +1410,16 @@ a#advanced-search {
  * --------------------------------------------------------------------
  */
 /* General Styles: */
+.page h1, .page h2, .page h3, .page h4, .page h5, .page h6, .page p {
+  padding: 0 4.167%; }
+  @media screen and (min-width: 600px) {
+    .page h1, .page h2, .page h3, .page h4, .page h5, .page h6, .page p {
+      padding: 0 8.33%; } }
+  @media screen and (min-width: 1200px) {
+    .page h1, .page h2, .page h3, .page h4, .page h5, .page h6, .page p {
+      max-width: 800px;
+      margin: 0 auto; } }
+
 /* Landing Page: */
 .home-landing-wrapper {
   position: relative;
@@ -1478,6 +1491,8 @@ a#advanced-search {
   grid-template-areas: "about" "exhibit" "bg" "context" "teaching";
   padding: 0 4.167%;
   padding-top: 1em; }
+  .home-main-content h3 {
+    font-weight: 400 !important; }
   @media screen and (min-width: 600px) {
     .home-main-content {
       padding: 0 8.33%;
@@ -1536,7 +1551,7 @@ a#advanced-search {
   position: relative;
   height: 3rem;
   width: 3rem;
-  margin-left: 1rem; }
+  margin-left: calc(70px - 3rem); }
   .navbar__home-icon a {
     display: inline-block;
     height: 100%;
@@ -1551,7 +1566,7 @@ a#advanced-search {
       padding: .3rem; }
 
 .navbar__links {
-  padding-right: 2rem; }
+  padding-right: 70px; }
   .navbar__links ul {
     position: relative;
     display: flex;
@@ -1563,14 +1578,14 @@ a#advanced-search {
       display: inline-block;
       height: 100%;
       margin-right: 1rem; }
+      .navbar__links ul li:last-of-type {
+        margin-right: 0; }
       .navbar__links ul li a {
         display: inline-block;
         height: 100%;
         padding-bottom: .25rem;
-        font-weight: bold;
         line-height: 1;
         color: black;
-        border-bottom: 1px solid black;
         -moz-transition: color .3s, border-bottom-color .3s;
         -webkit-transition: color .3s, border-bottom-color .3s;
         transition: color .3s, border-bottom-color .3s; }

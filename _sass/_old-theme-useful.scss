@@ -1601,13 +1601,13 @@ footer {
         margin-top: 0;
         &.credits {
             a {
-                background: url("../images/powered.png") no-repeat top left;
+                background: url("../img/powered.png") no-repeat top left;
                 float: right;
                 margin-left: 1px;
                 text-indent: -9999px;
                 width: 108px;
                 &.designed {
-                    background: url("../images/designed.png") no-repeat top left;
+                    background: url("../img/designed.png") no-repeat top left;
                 }
                 &:hover {
                     background-position: bottom;
@@ -1683,11 +1683,11 @@ div {
     }
 }
 
-#home h3 {
+/* #home h3 {
     margin-bottom: 18px;
     margin-top: 18px;
     text-transform: uppercase;
-}
+} */
 
 #featured-item {
     h3 a:hover {
@@ -1724,9 +1724,10 @@ div {
     }
 }
 
+/*
 h2 {
     text-transform: uppercase;
-}
+} */
 
 #homepage-text {
     margin-top: -18px;

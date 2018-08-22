@@ -25,40 +25,44 @@
     <?php queue_js_file('globals'); ?>
     <?php echo head_js(); ?>
 </head>
- <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
-    <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
-        <header>
-            <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
-            <div id="site-title"><?php echo link_to_home_page(theme_logo()); ?></div>
-			<div id="primary-nav">
-             <?php
-                  echo public_nav_main();
-             ?>
-			</div>
-        </header>         
-  
-         <div id="mobile-nav">
-             <?php
-                  echo public_nav_main();
-             ?>
-         </div>
-        
-		<?php if ((get_theme_option('Header Image') !== null)): ?>
-		<div id="header-image-holder">
-		<div class="held">
-		<?php if ((get_theme_option('header_image_heading') !== '')): ?>
-		<h2><?php echo get_theme_option('header_image_heading'); ?></h2>
-		<?php endif; ?>
-		<?php if ((get_theme_option('header_image_text') !== '')): ?>
-		<p><?php echo get_theme_option('header_image_text'); ?></p>
-		<?php endif; ?>
-		</div>
-        <?php echo theme_header_image(); ?>
-		</div>
-		<?php endif; ?>
-		
-		
-                       
-    <div id="content">
+<!-- start body -->
+<?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
+<?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
 
-<?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>
+    <!-- navbar -->
+    <header class="navbar-wrapper">
+        <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
+        <div class="navbar__home-icon">
+            <?php
+            $iconSrc  = img("theme-files/internet.svg", "img");
+            $homeLink = link_to_home_page('<img src="' . $iconSrc . '" alt="Mapping Lowell" />');
+            ?>
+            <?php echo $homeLink; ?>    
+        </div>
+        <div class="navbar__links">
+            <?php echo public_nav_main(); ?>
+        </div>
+    </header>
+
+    <!--header class="navbar-wrapper">
+        <div class="navbar__home-icon">
+            <a href="http://mappinglowell.net/" ><img src='<?php // echo img("theme-files/internet.svg", "img"); ?>' alt="Mapping Lowell" /></a>
+        </div>
+
+        <div class="navbar__links">
+            <ul>
+                <li><a href="http://mappinglowell.net/">Mapmakers</a></li>
+                <li><a href="http://mappinglowell.net/">Comments</a></li>
+                <li><a href="http://mappinglowell.net/about">Contacts</a></li>
+            </ul>
+        </div>
+    </header-->    
+  
+    <div id="mobile-nav">
+        <?php echo public_nav_main(); ?>
+    </div>
+
+    <!-- start main content -->                  
+    <div id="main-content">
+
+    <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>
