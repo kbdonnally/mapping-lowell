@@ -13,13 +13,14 @@
 // functions
 function import_file($filename, $filepath = 'exhibits/partials')
 {
-	return get_view()->partial($filepath . '/' . $filename . '.php');
+	return get_view()->partial($filepath . '/' . $filename);
 }
 
 // variables
 $title 		 = nl_getExhibitField('title');
-$exhibit 	 = import_file('exhibit');
-$narrative 	 = import_file('narrative');
+$exhibit 	 = import_file('exhibit.php');
+$narrative 	 = import_file('narrative.php');
+$js 		 = import_file('script.js', 'exhibits/themes/following-the-money/assets/js');
 ?>
 
 <!-- head & header -->
