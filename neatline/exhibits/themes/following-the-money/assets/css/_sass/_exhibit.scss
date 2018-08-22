@@ -6,6 +6,8 @@
 $themeblue: hsla(181,100%,90%,1);
 
 body.neatline {
+	overflow: visible;
+	color: #222;
 	// TEMPORARY:
 	& > header {
 		display: flex;
@@ -27,8 +29,14 @@ body.neatline {
 
 .exhibit-landing {
 	padding: 0 4.167%;
+	border-top: 2px solid #333;
 	@media screen and (min-width: 600px) {
 		padding: 0 8.33%;
+	}
+	@media screen and (min-width: 768px) {
+		display: flex;
+		align-items: center;
+		padding: 0 70px; // match map
 	}
 }
 
@@ -36,6 +44,10 @@ body.neatline {
 
 // also see main theme
 .exhibit-landing__title {
+	color: #333;
+	@media screen and (min-width: 900px) {
+		font-size: 2.5rem !important;
+	}
 	@media screen and (min-width: 1200px) {
 		font-size: 3rem !important;
 	}
@@ -46,6 +58,8 @@ body.neatline {
 a.nl-fullscreen {
     display: inline-block;
     margin-bottom: 1em;
+    float: right;
+    white-space: nowrap;
 }
 
 /* CSS snippet:
@@ -58,14 +72,40 @@ padding: 0 4.167%;
 
 .exhibit-main-content {
 	position: relative;
-//	display: flex;
+	display: flex;
+	flex-flow: column nowrap;
+	width: 100vw;
+	margin: 0;
+	padding: 0;
+	@media screen and (min-width: 900px) {
+	//	position: sticky;
+	//	top: 0;
+		flex-flow: row nowrap;
+//		height: 100vh;
+//		margin-bottom: 3rem;
+		border-top: 2px solid #333;
+		border-bottom: 2px solid #333;
+	}
 }
 
 .exhibit__map {
-
+	width: 100%;
+	@media screen and (min-width: 900px) {
+		width: 66.67%;
+	//	max-height: 100vh;
+	}
 }
 
 .exhibit__narrative {
+	position: relative;
+	width: 100%;
+	padding: 0 1em;
+//	font-size: 18px;
+	@media screen and (min-width: 900px) {
+		width: 33.33%;
+		max-height: 800px;
+		overflow-y: scroll;
+	}
 	h3 {
 		border-bottom: 2px solid $themeblue;
 	}
@@ -88,29 +128,75 @@ padding: 0 4.167%;
 			font-size: 2rem;
 		}	
 	}
+	p {
+		
+	}
+}
+
+/* Fullscreen: */
+
+body.fullscreen.neatline {
+	h1,
+	h2,
+	h3,
+	p {
+		margin-left: 4.167%;
+		margin-right: 4.167%;
+		@media screen and (min-width: 600px) {
+			margin-left: 8.33%;
+			margin-right: 8.33%;
+		}
+	}
+	h3 {
+		border-bottom: 2px solid $themeblue;
+		& > * {
+			margin-top: 1.5em;
+			margin-bottom: .5em;
+			padding-bottom: .5em;
+			font-size: 1rem;
+			font-weight: 400;
+			font-family: "Playfair Display", serif;
+			line-height: 1 !important;
+			@media screen and (min-width: 600px) {
+				font-size: 1.5rem;
+			}
+			@media screen and (min-width: 768px) {
+				font-size: 1.75rem;
+			}
+			@media screen and (min-width: 1024px) {
+				font-size: 2rem;
+			}	
+		}
+	}
+	p {
+		font-size: 18px;
+	}
 }
 
 /* Exhibit: */
 
 #neatline-map {
     position: relative;
-    height: 800px;
+    .olLayerDiv > svg {
+    	path {
+    		fill: $themeblue !important;
+    		fill-opacity: 0.5 !important;
+    		stroke-opacity: 0.7 !important;
+ 			&:hover, &:focus, &:active {
+ 				fill-opacity: 0.9 !important;
+ 			}
+    	}
+    	.path--selected {
+    		fill: red !important;
+    		fill-opacity: 0.9 !important;
+    	}
+    }
 }
 
 #neatline .widget {
     opacity: .9;
     position: absolute;
     z-index: 999;
-}
-
-/* Narrative: */
-
-#neatline-narrative {
-	padding-right: 0;
-	margin: 0;
-	// inside this is just gonna be plain HTML
-	// looks like it's mostly <h3><p>....<h3><p>...
-	// so use JS to add boxes around those
 }
 
 /* Waypoints: */
@@ -141,8 +227,8 @@ padding: 0 4.167%;
             background: #e0f5ff;
         }
         &.selected {
-            background: #08c;
-            color: #fff;
+            background: #222;
+            color: $themeblue;
         }
     }
 }
